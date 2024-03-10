@@ -7,7 +7,7 @@ import './profile.scss';
 function Profile() {
   const textref = useRef(null);
   const githubLink = 'https://github.com/Vinh364676';
-  const overleadLink = "https://drive.google.com/drive/folders/1vYNJkfU_CbsKHO1byOsA2CXQxYgp4OIC?hl=vi";
+  const overleadLink = "https://github.com/Vinh364676/portfolio/blob/main/PhamQuangVinh.pdf";
   useEffect(() => {
     if (textref.current) {
       init(textref.current, {
