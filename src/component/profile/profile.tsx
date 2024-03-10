@@ -32,13 +32,13 @@ function Profile() {
         <h5 className='profile__content__top'>Hi, Myself</h5>
         <h3 className='profile__content__name'>Pham Quang Vinh</h3>
   
+
         <h5 className='profile__content__top profile__content__job'>
           And I'm a
           <span className='profile__content__job__text' ref={textref}>
           {' '}
           </span>
         </h5>
-
       
         <p className='profile__content__intro'>
           As a senior student at the Faculty of Information Technology, I specialize in the field of Software Engineering and have a strong background in web programming. My passion for creativity and problem solving has led me to explore and apply the latest knowledge in this field.
