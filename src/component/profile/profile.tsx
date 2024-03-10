@@ -4,10 +4,13 @@ import { Button } from 'antd';
 import { DownloadOutlined,GithubOutlined } from '@ant-design/icons';
 import './profile.scss';
 
+
+// Use the 'amnh' variable as needed in your code
+
 function Profile() {
   const textref = useRef(null);
   const githubLink = 'https://github.com/Vinh364676';
-  const overleadLink = "https://github.com/Vinh364676/portfolio/blob/main/PhamQuangVinh.pdf";
+  const overleadLink = "https://www.overleaf.com/project/65e02899ab9c3a8b4e065e93";
   useEffect(() => {
     if (textref.current) {
       init(textref.current, {
