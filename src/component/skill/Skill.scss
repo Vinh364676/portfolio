@@ -1,0 +1,57 @@
+.skill{
+    &__title{
+        text-align: start;
+    }
+    &__content{
+        max-width: 400px;
+    }
+    &__slide{
+       
+        max-height: 100px;
+        .slide__img{
+
+        }
+       
+    }
+}
+.slide{
+    max-width: 500px;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+    &__container{
+        width: 253px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 17px;
+        background: #73F;
+        border-radius: 24px;
+        
+    }
+    &__title{
+      
+        margin: 0;
+width: 100%;
+color: #fff;
+    }
+    &__desc{
+        color: #fff;
+        margin-top: 45px;
+    }
+}
+.slide__img{
+    width: 402px !important;
+    height: 90% !important;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 45px;
+}
+.slick-arrow {
+    &::before{
+        font-size: 30px !important;
+        color: #73F !important;
+    }
+}
