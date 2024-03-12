@@ -1,8 +1,8 @@
+
 body {
   scroll-behavior: smooth;
   overflow-y: scroll;
   overscroll-behavior-y: contain;
-  margin: 60px;
 }
 
 /* Tùy chỉnh thanh cuộn */
@@ -30,3 +30,10 @@ body {
   scroll-snap-align: start;
 }
 
+ .ant-float-btn-body{
+  background-color: #7733FF !important;
+  color: #fff !important;
+ }
+ .ant-float-btn-icon{
+  color: #fff !important;
+ }

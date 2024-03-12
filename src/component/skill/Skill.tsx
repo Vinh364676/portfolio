@@ -21,7 +21,9 @@ function Skill() {
     // Add more data items as needed
   ];
   return (
-    <div id='skill' className='skill'>
+    <div data-aos="fade-down"
+    data-aos-easing="linear"
+    data-aos-duration="800" id='skill' className='skill'>
     <h5 className='contact__title skill__title'>Skill</h5>
     <div className='contact__line'></div>
     <div className='skill_slide'>

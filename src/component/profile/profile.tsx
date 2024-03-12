@@ -44,13 +44,13 @@ function Profile() {
           As a senior student at the Faculty of Information Technology, I specialize in the field of Software Engineering and have a strong background in web programming. My passion for creativity and problem solving has led me to explore and apply the latest knowledge in this field.
         </p>
         <div className='profile__button'>
-          <Button className='header__button' icon={<DownloadOutlined />}>
+          <Button className='header__button profile__button__container' icon={<DownloadOutlined />}>
             <a href={overleadLink}>
-            Resume
+            <span>Resume</span>
             </a>
           </Button>
           
-          <Button className='header__button'><a href={githubLink} target="_blank" rel="noopener noreferrer">
+          <Button className='header__button profile__button__container'><a href={githubLink} target="_blank" rel="noopener noreferrer">
           <GithubOutlined /> <span>Github</span>
             </a></Button>
           

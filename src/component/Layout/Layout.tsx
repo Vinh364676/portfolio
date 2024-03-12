@@ -6,6 +6,7 @@ import Contact from "../contact/Contact";
 import "./Layout.scss";
 import Skill from "../skill/Skill";
 import Experience from "../experience/Experience";
+
 function Layout() {
   return (
     <div className="layout"

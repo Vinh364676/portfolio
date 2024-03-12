@@ -1,9 +1,13 @@
+@import "../../config.scss";
 .experience {
     &__title {
         text-align: end;
     }
     &__content {
         margin-top: 100px;
+@include mobile{
+    margin-top: 40px;
+}
         .ant-timeline-item-head {
             background: none;
         }
@@ -17,6 +21,9 @@
             font-weight: 600;
             line-height: 24px; /* 120% */
             letter-spacing: 0.38px;
+            @include mobile{
+                font-size: 16px;
+            }
         }
         .ant-tabs-nav {
             &::before {
@@ -32,10 +39,15 @@
             background: #73f;
             color: #fff !important;
             width: 220px;
+            
             text-align: center;
             display: flex;
             justify-content: center;
             border: none !important;
+            @include mobile{
+                width: 160px;
+               
+            }
         }
         .ant-tabs-ink-bar{
             background: none;
@@ -44,6 +56,9 @@
 }
 .timeline {
     margin-top: 80px;
+    @include mobile{
+        margin-top: 40px;
+    }
     .ant-timeline-item-tail {
         border-inline-start: 3px solid rgba(54, 54, 54, 0.8);
     }
@@ -60,6 +75,10 @@
         box-shadow:
             6px 6px 12px 0px rgba(0, 0, 0, 0.25),
             -6px -6px 12px 0px rgba(255, 255, 255, 0.25);
+            @include mobile{
+                margin-left: 15px;
+                margin-bottom: 30px;
+            }
         &:hover {
             box-shadow:
                 20px 20px 30px 0px rgba(0, 0, 0, 0.25),
@@ -70,20 +89,32 @@
             margin: 11px 0 16px 0;
             font-size: 23px;
             color: rgb(255, 255, 255);
+            @include mobile{
+                font-size: 20px;
+            }
         }
         &__project {
             margin: 10px 0;
             font-size: 19px;
             color: rgb(143, 142, 142);
+            @include mobile{
+                font-size: 18px;
+            }
         }
         &__date {
             font-size: 19px;
             color: rgb(143, 142, 142);
             margin: 8px 0;
+            @include mobile{
+                font-size: 18px;
+            }
         }
         &__text {
             font-size: 18px;
             color: rgb(98, 93, 93);
+            @include mobile{
+                font-size: 16px;
+            }
         }
     }
 }

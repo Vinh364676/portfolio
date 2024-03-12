@@ -20,7 +20,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-app-rewired start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -48,8 +48,14 @@
   "devDependencies": {
     "@types/aos": "^3.0.7",
     "@types/ityped": "^1.0.3",
+    "@types/node": "^20.11.25",
     "@types/react-scroll": "^1.8.10",
     "@types/react-slick": "^0.23.13",
-    "gh-pages": "^6.1.1"
+    "customize-cra": "^1.0.0",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
+    "react-app-rewired": "^2.2.1",
+    "ts-loader": "^9.5.1",
+    "url-loader": "^4.1.1"
   }
 }

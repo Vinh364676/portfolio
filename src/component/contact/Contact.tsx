@@ -1,22 +1,26 @@
 import React from 'react'
 import "./Contact.scss";
 import { Button, Col, Form, Input, Row } from 'antd';
+import UseRespon from '../../hook/useRessponsive';
 function Contact() {
+  const {isMobile} = UseRespon();
   return (
     <div id='contact' >
-      <div  data-aos="zoom-in" className='contact'>
+      <div  data-aos="zoom-in" data-aos-duration="800" className='contact'>
 
      
       <h5 className='contact__title'>Contact Me</h5>
       <div className='contact__line'></div>
       
       <Row className='contact__content'>
-        <Col xl={12}>
-          <div className='content_rectangle'>
-            <div className='content_rectangle__image'></div>
-          </div>
+        <Col xl={12} xs={24}>
+          {isMobile?null:<div className='content_rectangle'>
+<div className='content_rectangle__image'></div>
+            
+          </div>}
+          
         </Col>
-        <Col xl={12}>
+        <Col xl={12} xs={24}>
         <Form
     name="basic"
     className='contact__form'

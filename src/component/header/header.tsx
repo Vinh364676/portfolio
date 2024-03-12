@@ -1,29 +1,58 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './header.scss';
-import { Button } from 'antd';
+import { Button, Drawer } from 'antd';
 import { Link } from "react-scroll";
 
+import { MenuOutlined } from '@ant-design/icons';
+import UseRespon from '../../hook/useRessponsive';
+
 function HeaderLayout() {
+  const { isTablet, isMobile } = UseRespon();
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+  const menuItems = [
+    { label: 'Profile', to: 'profile', duration: 300, offset: -50 },
+    { label: 'About', to: 'about', duration: 300, offset: -120 },
+    { label: 'Skill', to: 'skill', duration: 600, offset: -120 },
+    { label: 'Learning', to: 'experience', duration: 600, offset: -120 },
+    { label: 'Contact', to: 'contact', duration: 600, offset: -120 },
+  ];
   return (
-    <div className='header'>
- <Link to="profile" spy={true} smooth={true} duration={300} offset={-50}>
-        <Button className='header__button'>Profile</Button>
- </Link>
-      
- <Link to="about" spy={true} smooth={true} duration={300} offset={-120}>
-        <Button className='header__button'>About</Button>
- </Link>
-        <Link to="skill" spy={true} smooth={true} duration={600} offset={-120}>
-        <Button className='header__button'>Skill</Button>
-      </Link>
-        <Link to="experience" spy={true} smooth={true} duration={600} offset={-120}>
-        <Button className='header__button'>Learning</Button>
-        </Link>
-        <Link to="contact" spy={true} smooth={true} duration={600} offset={-120}>
-        <Button className='header__button'>Contact</Button>
-        </Link>
+    
+ <div className='header'>
+   
+      {isMobile ? (
+        <div className='header__mobile'>
+          <MenuOutlined  className=''onClick={showDrawer}/>
+        </div>
+      ) : (
+        <div className='header'>
+          {menuItems.map((item, index) => (
+            <Link key={index} to={item.to} spy={true} smooth={true} duration={item.duration} offset={item.offset}>
+              <Button className='header__button'>{item.label}</Button>
+            </Link>
+          ))}
+        </div>
+      )}
+      <Drawer onClose={onClose} open={open} className='menu'>
+    {menuItems.map((item, index) => (
+          <Link key={index} to={item.to} spy={true} smooth={true} duration={item.duration} offset={item.offset}>
+            <div className='menu__container'>
+            <Button className='menu__container__button' onClick={onClose} >{item.label}</Button>
+            </div>
+          </Link>
+        ))}
+    </Drawer>
     </div>
+   
+  
   )
 }
+
 
 export default HeaderLayout

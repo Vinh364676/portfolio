@@ -1,8 +1,13 @@
+@import "../../config.scss";
 .profile {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 80px;
+    @include mobile{
+        margin-top: 50px;
+    }
     &__container {
         margin-top: 107px;
         border-radius: 50%;
@@ -12,12 +17,25 @@
         box-shadow:
             25px 25px 60px 0px rgba(0, 0, 0, 0.25),
             -25px -25px 60px 0px rgba(255, 255, 255, 0.25);
-           
+           @include mobile{
+            width: 217px;
+            height: 217px;
+            margin-top: 16px;
+           }
+           @include tablet{
+            width: 347px;
+            height: 347px;
+            margin-top: 32px;
+           }
         &__image {
             width: 100%;
             height: 100%;
             background-image: url("../../accset/image/logo.svg");
             animation: bounceUpDown 2s infinite;
+            background-size: cover;
+            @include mobile{
+               
+            }
         }
         @keyframes bounceUpDown {
             0%, 20%, 50%, 80%, 100% {
@@ -50,6 +68,14 @@
             letter-spacing: 0.38px;
             margin: 0;
             margin-top: 55px;
+            @include mobile{
+                font-size: 20px;
+                margin-top: 13px;
+            }
+            @include tablet{
+                font-size: 26px;
+                margin-top: 22px;
+            }
         }
         &__name {
             color: #fff;
@@ -61,6 +87,14 @@
             font-weight: 500;
             line-height: 24px; /* 38.71% */
             letter-spacing: 0.38px;
+            @include mobile{
+                font-size: 22px;
+                margin: 8px 0;
+            }
+            @include tablet{
+                font-size: 40px;
+                margin: 28px 0;
+            }
         }
         &__job{
             display: flex;
@@ -68,7 +102,6 @@
             justify-content: center;
             gap: 7px;
             &__text{
-                
                 color: #D32D20;
                 margin: 0;
             }
@@ -85,6 +118,13 @@
             font-weight: 100;
             line-height: 28px;
             letter-spacing: 0.38px;
+            @include mobile{
+                margin-top: 9px;
+                font-size: 16px;
+                padding: 0 10px;
+                line-height: 20px;
+               
+            }
         }
         
     }
@@ -93,8 +133,39 @@
        justify-content: center;
        gap: 76px;
        margin-top: 45px;
+      
+       @include mobile{
+        gap: 22px !important;
+       }
+       @include tablet{
+        gap: 45px !important;
+       }
+       &__container{
+        @include mobile{
+            width: 117px;
+            height: 48px;
+            
+            border-radius: 24px;
+        }
+        span{
+            @include mobile{
+                font-size: 16px;
+            }  
+        }
+       }
        .header__button{
-        box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.25), -7px -7px 10px 0px rgba(174, 168, 168, 0.25);
+        box-shadow: 10px 10px 12px 0px rgba(0, 0, 0, 0.25), -7px -7px 10px 0px rgba(174, 168, 168, 0.25);      
+        &:hover{
+            span{
+                color: #73f !important;
+            }
+            
+           }
+        
+    }
+       @include mobile{
+        margin-top: 33px;
+       
        }
     }
 }
