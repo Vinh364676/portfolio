@@ -32,6 +32,7 @@ function Profile() {
         <h5 className='profile__content__top'>Hi, Myself</h5>
         <h3 className='profile__content__name'>Pham Quang Vinh</h3>
   
+  
 
         <h5 className='profile__content__top profile__content__job'>
           And I'm a
